@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7C596BFF"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="59dp" />
+
+    <TableRow
+        android:id="@+id/spaceRow1"
+        android:layout_width="match_parent"
+        android:layout_height="112dp">
+
+        <Button
+            android:id="@+id/btnSpace1"
+            android:layout_width="135dp"
+            android:layout_height="115dp" />
+
+        <Button
+            android:id="@+id/btnSpace2"
+            android:layout_width="135dp"
+            android:layout_height="115dp" />
+
+        <Button
+            android:id="@+id/btnSpace3"
+            android:layout_width="135dp"
+            android:layout_height="115dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/spaceRow2"
+        android:layout_width="match_parent"
+        android:layout_height="112dp">
+
+        <Button
+            android:id="@+id/btnSpace4"
+            android:layout_width="135dp"
+            android:layout_height="115dp" />
+
+        <Button
+            android:id="@+id/btnSpace5"
+            android:layout_width="135dp"
+            android:layout_height="115dp" />
+
+        <Button
+            android:id="@+id/btnSpace6"
+            android:layout_width="135dp"
+            android:layout_height="115dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/spaceRow3"
+        android:layout_width="match_parent"
+        android:layout_height="112dp">
+
+        <Button
+            android:id="@+id/btnSpace7"
+            android:layout_width="135dp"
+            android:layout_height="115dp" />
+
+        <Button
+            android:id="@+id/btnSpace8"
+            android:layout_width="135dp"
+            android:layout_height="115dp" />
+
+        <Button
+            android:id="@+id/btnSpace9"
+            android:layout_width="135dp"
+            android:layout_height="115dp" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/btnStartGame"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="@string/newGameButtonText" />
+</LinearLayout>

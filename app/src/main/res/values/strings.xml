@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="startButtonText">Start Playing</string>
+    <string name="splashScreenText">Sam\'s Tic Tac Toe App</string>
+    <string name="newGameButtonText">New Game</string>
+</resources>
