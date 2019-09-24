@@ -8,41 +8,22 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="182dp" />
+        android:layout_height="237dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="64dp"
+        android:fontFamily="@font/ubuntu_bold"
         android:text="@string/splashScreenText"
         android:textAlignment="center"
         android:textColor="#050505"
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/btnStartGame"
+        android:id="@+id/btnNewGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/startButtonText" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
 </LinearLayout>

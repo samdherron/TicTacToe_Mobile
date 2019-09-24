@@ -16,7 +16,7 @@ public class SplashScreen extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
 
-        btnStartGame = findViewById(R.id.btnStartGame);
+        btnStartGame = findViewById(R.id.btnNewGame);
         btnStartGame.setOnClickListener(this);
     }
 

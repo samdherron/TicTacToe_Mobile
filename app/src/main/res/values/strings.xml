@@ -3,4 +3,8 @@
     <string name="startButtonText">Start Playing</string>
     <string name="splashScreenText">Sam\'s Tic Tac Toe App</string>
     <string name="newGameButtonText">New Game</string>
+    <string name="XValue">X</string>
+    <string name="OValue">O</string>
+    <string name="TurnDisplayX">Player 1\'s Turn (X)</string>
+    <string name="TurnDisplayY">"Player 2\'s Turn (Y)"</string>
 </resources>

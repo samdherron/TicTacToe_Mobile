@@ -18,17 +18,27 @@
         <Button
             android:id="@+id/btnSpace1"
             android:layout_width="135dp"
-            android:layout_height="115dp" />
+            android:layout_height="115dp"
+            android:background="@android:drawable/btn_default"
+            android:shadowColor="#00D33838"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="10"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btnSpace2"
             android:layout_width="135dp"
-            android:layout_height="115dp" />
+            android:layout_height="115dp"
+            android:background="@android:drawable/btn_default"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btnSpace3"
             android:layout_width="135dp"
-            android:layout_height="115dp" />
+            android:layout_height="115dp"
+            android:background="@android:drawable/btn_default"
+            android:textSize="30sp" />
 
     </TableRow>
 
@@ -40,17 +50,23 @@
         <Button
             android:id="@+id/btnSpace4"
             android:layout_width="135dp"
-            android:layout_height="115dp" />
+            android:layout_height="115dp"
+            android:background="@android:drawable/btn_default"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btnSpace5"
             android:layout_width="135dp"
-            android:layout_height="115dp" />
+            android:layout_height="115dp"
+            android:background="@android:drawable/btn_default"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btnSpace6"
             android:layout_width="135dp"
-            android:layout_height="115dp" />
+            android:layout_height="115dp"
+            android:background="@android:drawable/btn_default"
+            android:textSize="30sp" />
 
     </TableRow>
 
@@ -62,22 +78,50 @@
         <Button
             android:id="@+id/btnSpace7"
             android:layout_width="135dp"
-            android:layout_height="115dp" />
+            android:layout_height="115dp"
+            android:background="@android:drawable/btn_default"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btnSpace8"
             android:layout_width="135dp"
-            android:layout_height="115dp" />
+            android:layout_height="115dp"
+            android:background="@android:drawable/btn_default"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btnSpace9"
             android:layout_width="135dp"
-            android:layout_height="115dp" />
+            android:layout_height="115dp"
+            android:background="@android:drawable/btn_default"
+            android:textSize="30sp" />
     </TableRow>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
     <Button
-        android:id="@+id/btnStartGame"
+        android:id="@+id/btnNewGame"
+        style="@android:style/MediaButton"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:text="@string/newGameButtonText" />
+        android:background="@android:drawable/btn_default"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/newGameButtonText"
+        android:textSize="18sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="19dp" />
+
+    <TextView
+        android:id="@+id/playerTurnDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="Player 1's Turn (X)"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp" />
 </LinearLayout>
