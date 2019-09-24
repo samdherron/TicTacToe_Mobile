@@ -1,6 +1,7 @@
 package com.github.tictactoe;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.solver.widgets.Rectangle;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity
     TextView turnTextDisplay;
     Map<Integer, String> shapeList = new HashMap<Integer, String>();
     Button[] buttonList = new Button[9];
+    String statusCheck = "";
 
     //endregion
 
@@ -111,49 +113,59 @@ public class MainActivity extends AppCompatActivity
         if (id != R.id.btnNewGame) {
 
         /* Checks whether or not the space clicked on
-            has a shape inside already  */
+           has a shape inside already  */
+
             Boolean emptySpace = checkForEmptySpace(id);
 
+                if (emptySpace && statusCheck == "") {
 
-            if (emptySpace) {
+                    //Gets which shape to draw inside of the space based on the number of moves
+                    String shapeText = getPlayerTurnShape(moveCounter);
 
-                //Gets which shape to draw inside of the space based on the number of moves
-                String shapeText = getPlayerTurnShape(moveCounter);
+                    //Draws the shape onto the specific button, also colours the button based on moveCounter
+                    drawSymbol(id, shapeText);
 
-                //Draws the shape onto the specific button, also colours the button based on moveCounter
-                drawSymbol(id, shapeText);
+                    //Updates the HashMap with the new Button value to keep track of all spaces
+                    shapeList.put(id, shapeText);
 
-                //Updates the HashMap with the new Button value to keep track of all spaces
-                shapeList.put(id, shapeText);
+                    //Increment moveCounter to change to the other player's turn
+                    moveCounter++;
 
-                //Increment moveCounter to change to the other player's turn
-                moveCounter++;
+                    //Updates the Text displaying which Player's turn it is
+                    updateTurnDisplay();
 
-                //Updates the Text displaying which Player's turn it is
-                updateTurnDisplay();
+                } else {
+                    Log.println(Log.ASSERT, "Already has shape", "The space you selected is already filled.");
+                }
 
-            } else {
-                Log.println(Log.ASSERT, "Already has shape", "The space you selected is already filled.");
+
             }
 
             /* Performs a Status Check to see if the a Player has won or
                 if the game is tied */
 
-            String statusCheck = gameCheck();
+            if (moveCounter >= 5) {
+                statusCheck = gameCheck();
 
-            if (statusCheck == "X Win") {
+                if (statusCheck == "X Win") {
 
-                Log.println(Log.ASSERT, "X Win", "X has won the game!");
+                    turnTextDisplay.setTextColor(Color.rgb(231, 29, 54));
+                    turnTextDisplay.setBackgroundColor(Color.argb(50, 0, 0, 0));
+                    turnTextDisplay.setText("Player 1 (X) has won the game!");
 
-            } else if (statusCheck == "Y Win") {
+                } else if (statusCheck == "O Win") {
+                    turnTextDisplay.setTextColor(Color.rgb(0, 185, 255));
+                    turnTextDisplay.setBackgroundColor(Color.argb(50, 0, 0, 0));
+                    turnTextDisplay.setText("Player 2 (O) has won the game!");
 
-                Log.println(Log.ASSERT, "Y Win", "Y has won the game!");
+                }
 
             }
 
+
         }
 
-    }
+
 
         public void startNewGame() {
 
@@ -168,7 +180,10 @@ public class MainActivity extends AppCompatActivity
             }
 
             shapeList.clear();
+            turnTextDisplay.setTextColor(000);
             turnTextDisplay.setText("Player 1's Turn (X)");
+            turnTextDisplay.setBackgroundColor(0);
+            statusCheck = "";
 
         }
 
@@ -329,9 +344,9 @@ public class MainActivity extends AppCompatActivity
 
                     returnVal = "X Win";
 
-                } else {
+                } else if (buttonList[0].getText() == "O") {
 
-                    returnVal = "Y Win";
+                    returnVal = "O Win";
 
                 }
             }
@@ -342,9 +357,9 @@ public class MainActivity extends AppCompatActivity
 
                     returnVal = "X Win";
 
-                } else {
+                } else if (buttonList[3].getText() == "O") {
 
-                    returnVal = "Y Win";
+                    returnVal = "O Win";
 
                 }
             }
@@ -355,9 +370,9 @@ public class MainActivity extends AppCompatActivity
 
                     returnVal = "X Win";
 
-                } else {
+                } else if (buttonList[6].getText() == "O") {
 
-                    returnVal = "Y Win";
+                    returnVal = "O Win";
 
                 }
             }
@@ -369,9 +384,9 @@ public class MainActivity extends AppCompatActivity
 
                     returnVal = "X Win";
 
-                } else {
+                } else if (buttonList[0].getText() == "O") {
 
-                    returnVal = "Y Win";
+                    returnVal = "O Win";
 
                 }
             }
@@ -382,9 +397,9 @@ public class MainActivity extends AppCompatActivity
 
                     returnVal = "X Win";
 
-                } else {
+                } else if (buttonList[1].getText() == "O") {
 
-                    returnVal = "Y Win";
+                    returnVal = "O Win";
 
                 }
             }
@@ -395,9 +410,9 @@ public class MainActivity extends AppCompatActivity
 
                     returnVal = "X Win";
 
-                } else {
+                } else if (buttonList[2].getText() == "O") {
 
-                    returnVal = "Y Win";
+                    returnVal = "O Win";
 
                 }
             }
@@ -409,9 +424,9 @@ public class MainActivity extends AppCompatActivity
 
                     returnVal = "X Win";
 
-                } else {
+                } else if (buttonList[0].getText() == "O") {
 
-                    returnVal = "Y Win";
+                    returnVal = "O Win";
 
                 }
             }
@@ -420,11 +435,11 @@ public class MainActivity extends AppCompatActivity
 
                 if (buttonList[2].getText() == "X") {
 
-                    returnVal = "X Win";
+                    returnVal = "O Win";
 
-                } else {
+                } else if (buttonList[2].getText() == "O") {
 
-                    returnVal = "Y Win";
+                    returnVal = "O Win";
 
                 }
             }
@@ -451,7 +466,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         else {
-        turnTextDisplay.setText("Player 2's Turn (Y)");
+        turnTextDisplay.setText("Player 2's Turn (O)");
         }
 
     }
