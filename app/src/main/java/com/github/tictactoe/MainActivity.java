@@ -435,7 +435,7 @@ public class MainActivity extends AppCompatActivity
 
                 if (buttonList[2].getText() == "X") {
 
-                    returnVal = "O Win";
+                    returnVal = "X Win";
 
                 } else if (buttonList[2].getText() == "O") {
 
