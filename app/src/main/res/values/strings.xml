@@ -1,10 +1,16 @@
 <resources>
     <string name="app_name">TicTacToe</string>
-    <string name="startButtonText">Start Playing</string>
+    <string name="startButtonText">Start Game</string>
+    <string name="scoreBoardButtonText">View Scoreboard</string>
+    <string name="SelectPlayer1">Select Player 1</string>
+    <string name="SelectPlayer2">Select Player 2</string>
+    <string name="newPlayer">Add Player</string>
     <string name="splashScreenText">Sam\'s Tic Tac Toe App</string>
     <string name="newGameButtonText">New Game</string>
     <string name="XValue">X</string>
     <string name="OValue">O</string>
     <string name="TurnDisplayX">Player 1\'s Turn (X)</string>
     <string name="TurnDisplayY">"Player 2\'s Turn (Y)"</string>
+    <string name="NewPlayer_EnterName">New Player Name:</string>
+    <string name="SubmitButton">Submit</string>
 </resources>

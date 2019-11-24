@@ -36,11 +36,15 @@ public class MainActivity extends AppCompatActivity
     Button btnSpace9;
     Button btnNewGame;
 
+    PlayerDatabase db;
+
     int moveCounter = 0;
     TextView turnTextDisplay;
     Map<Integer, String> shapeList = new HashMap<Integer, String>();
     Button[] buttonList = new Button[9];
     String statusCheck = "";
+    TextView player1Display;
+    TextView player2Display;
 
     //endregion
 
@@ -93,6 +97,14 @@ public class MainActivity extends AppCompatActivity
         //endregion
 
         turnTextDisplay = findViewById(R.id.playerTurnDisplay);
+
+        player1Display = findViewById(R.id.player1Name);
+        player2Display = findViewById(R.id.player2Name);
+
+        player1Display.setText(VarTempStorage.player1Name);
+        player2Display.setText(VarTempStorage.player2Name);
+
+        db = new PlayerDatabase(this);
 
     }
 
@@ -443,7 +455,6 @@ public class MainActivity extends AppCompatActivity
 
                 }
             }
-
 
             //endregion
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7C596BFF"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="147dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:text="@string/SelectPlayer2" />
+
+    <ListView
+        android:id="@+id/SelectPlayer2_playerListView"
+        android:layout_width="match_parent"
+        android:layout_height="402dp" />
+</LinearLayout>

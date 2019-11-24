@@ -8,7 +8,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="237dp" />
+        android:layout_height="53dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -25,5 +25,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/startButtonText" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="14dp" />
+
+    <Button
+        android:id="@+id/btnViewScoreboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scoreBoardButtonText" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="14dp" />
+
+    <Button
+        android:id="@+id/btnSelectPlayer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SelectPlayer1" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="14dp" />
+
+    <Button
+        android:id="@+id/btnSelectPlayer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SelectPlayer2" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="14dp" />
+
+    <Button
+        android:id="@+id/btnNewPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/newPlayer" />
 
 </LinearLayout>
